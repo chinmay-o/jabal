@@ -1,0 +1,25 @@
+
+.custom-footer-dark {
+
+  background: #000!important;
+}
+
+.custom-footer-dark .disc, .custom-footer-dark .title-footer, .custom-footer-dark ul li {
+
+  color: #fff!important;
+}
+
+.rts-footer-right-two .single-wized .contact-info .rts-contact-info-single .number a {
+
+  color: #fff!important;
+}
+
+.header-one .thumbnail img, .header-one .header-right {
+
+  padding: 18px 0 !important;
+}
+
+.rts-single-service-one .icon {
+
+  width: 120px;
+}
