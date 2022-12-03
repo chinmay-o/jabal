@@ -1,3 +1,12 @@
+#logStatus {
+
+  display: none;
+}
+
+.tenor-gif-embed {
+
+  display: none;
+}
 
 .custom-footer-dark {
 
@@ -22,4 +31,21 @@
 .rts-single-service-one .icon {
 
   width: 120px;
+}
+
+.custom-grid {
+
+  flex-direction: row !important;
+  display: -webkit-box !important;
+  -webkit-box-align: center !important;
+}
+
+.custom-grid .product-contact-wrapper {
+
+  margin-right: auto;
+}
+
+.custom-grid .btn-primary {
+
+  margin-right: 26px;
 }

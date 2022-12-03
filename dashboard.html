@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 
-<body>
+<body id="logStatus">
     <!-- start header area -->
     <!-- header one -->
     <header class="header-one header--sticky three">
@@ -37,10 +37,10 @@
                         <nav class="main-nav">
                             <ul class="mainmenu">
                                 <li>
-                                    <a href="our-products.html">Our Products</a>
+                                    <a href="dashboard.html">Dashboard</a>
                                 </li>
                                 <li>
-                                    <a href="contact.html">Contact</a>
+                                    <a href="add-products.html">Products</a>
                                 </li>
                             </ul>
                         </nav>
@@ -48,7 +48,7 @@
                 </div>
                 <div class="col-xl-3 col-lg-9 col-md-9 col-8">
                     <div class="header-right">
-                        <a href="#" class="rts-btn btn-secondary call-btn">Let’s Talk
+                        <a href="javascript:signingOut();" class="rts-btn btn-secondary call-btn">Logout
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path d="M5.96875 7C5.96875 6.46875 5.5 6 4.96875 6H4.5C3.375 6 2.5 6.90625 2.5 8.03125V9.5C2.5 10.625 3.375 11.5 4.5 11.5H5C5.53125 11.5 6 11.0625 6 10.5L5.96875 7ZM8 0C3.5 0 0.125 3.75 0 8V9.25C0 9.6875 0.3125 10 0.71875 10C1.09375 10 1.5 9.6875 1.5 9.25V8C1.5 4.4375 4.40625 1.53125 8 1.53125C11.5625 1.53125 14.5 4.4375 14.5 8V12.5C14.5 13.2188 13.9375 13.75 13.25 13.75H9.78125C9.53125 13.3125 9.03125 13 8.5 13H7.53125C6.8125 13 6.15625 13.5 6 14.2188C5.84375 15.1875 6.5625 16 7.46875 16H8.5C9.03125 16 9.53125 15.7188 9.78125 15.25H13.25C14.75 15.25 16 14.0312 16 12.5V8C15.8438 3.75 12.4688 0 8 0ZM11.5 11.5C12.5938 11.5 13.5 10.625 13.5 9.5V8.03125C13.5 6.90625 12.5938 6 11.5 6H11C10.4375 6 10 6.46875 10 7.03125V10.5C10 11.0625 10.4375 11.5 11 11.5H11.5Z" fill="#3B38EB" />
                             </svg>
@@ -123,203 +123,43 @@
 
     <div id="anywhere-home"></div>
 
-    <!-- start breadcrumb area -->
-    <div class="rts-breadcrumb-area breadcrumb-bg bg_image">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
-                    <h1 class="title" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">Our Products</h1>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <div class="bread-tag">
-                        <a href="index.html" data-sal-delay="250" data-sal="slide-up" data-sal-duration="800">Home</a>
-                        <span> / </span>
-                        <a href="javascript:void();" class="active" data-sal-delay="450" data-sal="slide-up" data-sal-duration="800">Products</a>
-                    </div>
-                </div>
+    <section class="wrapper bg-light rts-section-gap">
+      <div class="container pt-12 pt-md-14 pb-14 pb-md-16">
+        <div class="row gx-md-8 gx-xl-12 gy-12">
+          <div class="col-lg-12">
+            <div class="table-responsive">
+              <table class="table text-center shopping-cart">
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="h6 mb-0">Time</div>
+                    </th>
+                    <th class="ps-0 w-25">
+                      <div class="h6 mb-0 text-start">Name</div>
+                    </th>
+                    <th>
+                      <div class="h6 mb-0">Email</div>
+                    </th>
+                    <th>
+                      <div class="h6 mb-0">Phone</div>
+                    </th>
+                    <th>
+                      <div class="h6 mb-0">Message</div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="enquiryList"></tbody>
+              </table>
             </div>
+            <!-- /.table-responsive -->
+          </div>
+          <!-- /column -->
         </div>
-    </div>
-    <!-- end breadcrumb area -->
-
-    <!-- project section srart -->
-    <div class="rts-project-area rts-section-gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-
-                    <div class="tab-content-area mt--50 mt_sm--30">
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                <!-- tab product area -->
-                                <div class="row g-5">
-                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                                        <!-- single -product area -->
-                                        <div class="rts-product-one">
-                                            <div class="thumbnail-area">
-                                                <img src="assets/images/products/01.jpg" alt="Business_Finbiz">
-                                                <a class="rts-btn btn-primary rounded" href="javascript:void();"><i class="far fa-arrow-right"></i></a>
-                                            </div>
-                                            <div class="product-contact-wrapper">
-                                                <a href="javascript:void();">
-                                                    <h5 class="title">Rice</h5>
-                                                </a>
-                                                <span>Grains</span>
-                                            </div>
-                                        </div>
-                                        <!-- single -product area End -->
-                                    </div>
-                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                                        <!-- single -product area -->
-                                        <div class="rts-product-one">
-                                            <div class="thumbnail-area">
-                                                <img src="assets/images/products/02.jpg" alt="Business_Finbiz">
-                                                <a class="rts-btn btn-primary rounded" href="javascript:void();"><i class="far fa-arrow-right"></i></a>
-                                            </div>
-                                            <div class="product-contact-wrapper">
-                                                <a href="javascript:void();">
-                                                    <h5 class="title">Chicken</h5>
-                                                </a>
-                                                <span>Meat</span>
-                                            </div>
-                                        </div>
-                                        <!-- single -product area End -->
-                                    </div>
-                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                                        <!-- single -product area -->
-                                        <div class="rts-product-one">
-                                            <div class="thumbnail-area">
-                                                <img src="assets/images/products/03.jpg" alt="Business_Finbiz">
-                                                <a class="rts-btn btn-primary rounded" href="javascript:void();"><i class="far fa-arrow-right"></i></a>
-                                            </div>
-                                            <div class="product-contact-wrapper">
-                                                <a href="javascript:void();">
-                                                    <h5 class="title">Clove</h5>
-                                                </a>
-                                                <span>Spices</span>
-                                            </div>
-                                        </div>
-                                        <!-- single -product area End -->
-                                    </div>
-
-                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                                        <!-- single -product area -->
-                                        <div class="rts-product-one">
-                                            <div class="thumbnail-area">
-                                                <img src="assets/images/products/04.jpg" alt="Business_Finbiz">
-                                                <a class="rts-btn btn-primary rounded" href="javascript:void();"><i class="far fa-arrow-right"></i></a>
-                                            </div>
-                                            <div class="product-contact-wrapper">
-                                                <a href="javascript:void();">
-                                                    <h5 class="title">Beef</h5>
-                                                </a>
-                                                <span>Meat</span>
-                                            </div>
-                                        </div>
-                                        <!-- single -product area End -->
-                                    </div>
-
-                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                                        <!-- single -product area -->
-                                        <div class="rts-product-one">
-                                            <div class="thumbnail-area">
-                                                <img src="assets/images/products/05.jpg" alt="Business_Finbiz">
-                                                <a class="rts-btn btn-primary rounded" href="javascript:void();"><i class="far fa-arrow-right"></i></a>
-                                            </div>
-                                            <div class="product-contact-wrapper">
-                                                <a href="javascript:void();">
-                                                    <h5 class="title">Mutton</h5>
-                                                </a>
-                                                <span>Meat</span>
-                                            </div>
-                                        </div>
-                                        <!-- single -product area End -->
-                                    </div>
-
-                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                                        <!-- single -product area -->
-                                        <div class="rts-product-one">
-                                            <div class="thumbnail-area">
-                                                <img src="assets/images/products/06.jpg" alt="Business_Finbiz">
-                                                <a class="rts-btn btn-primary rounded" href="javascript:void();"><i class="far fa-arrow-right"></i></a>
-                                            </div>
-                                            <div class="product-contact-wrapper">
-                                                <a href="javascript:void();">
-                                                    <h5 class="title">Pepper</h5>
-                                                </a>
-                                                <span>Spices</span>
-                                            </div>
-                                        </div>
-                                        <!-- single -product area End -->
-                                    </div>
-
-                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                                        <!-- single -product area -->
-                                        <div class="rts-product-one">
-                                            <div class="thumbnail-area">
-                                                <img src="assets/images/products/07.jpg" alt="Business_Finbiz">
-                                                <a class="rts-btn btn-primary rounded" href="javascript:void();"><i class="far fa-arrow-right"></i></a>
-                                            </div>
-                                            <div class="product-contact-wrapper">
-                                                <a href="javascript:void();">
-                                                    <h5 class="title">Cardamom</h5>
-                                                </a>
-                                                <span>Spices</span>
-                                            </div>
-                                        </div>
-                                        <!-- single -product area End -->
-                                    </div>
-
-                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                                        <!-- single -product area -->
-                                        <div class="rts-product-one">
-                                            <div class="thumbnail-area">
-                                                <img src="assets/images/products/08.jpg" alt="Business_Finbiz">
-                                                <a class="rts-btn btn-primary rounded" href="javascript:void();"><i class="far fa-arrow-right"></i></a>
-                                            </div>
-                                            <div class="product-contact-wrapper">
-                                                <a href="javascript:void();">
-                                                    <h5 class="title">Turmeric</h5>
-                                                </a>
-                                                <span>Spices</span>
-                                            </div>
-                                        </div>
-                                        <!-- single -product area End -->
-                                    </div>
-
-                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                                        <!-- single -product area -->
-                                        <div class="rts-product-one">
-                                            <div class="thumbnail-area">
-                                                <img src="assets/images/products/09.jpg" alt="Business_Finbiz">
-                                                <a class="rts-btn btn-primary rounded" href="javascript:void();"><i class="far fa-arrow-right"></i></a>
-                                            </div>
-                                            <div class="product-contact-wrapper">
-                                                <a href="javascript:void();">
-                                                    <h5 class="title">Chilly</h5>
-                                                </a>
-                                                <span>Spices</span>
-                                            </div>
-                                        </div>
-                                        <!-- single -product area End -->
-                                    </div>
-
-                                </div>
-                                <!-- tab product area end-->
-
-                                <div class="row g-5" id="productList">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- project section end -->
-
-    <!-- start Footer area -->
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
 
     <!-- start header area -->
     <!-- start footer area -->
@@ -475,15 +315,15 @@
     <!-- scripts end form hear -->
 
     <!-- Firebase CDN -->
-  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-storage.js"></script>
 
-  <!-- Firebase Database -->
-  <script src="https://momentjs.com/downloads/moment.js"></script>
-  <script src="assets/js/firebase.js"></script>
-  <script src="assets/js/products.js"></script>
+    <!-- Firebase Database -->
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="assets/js/firebase.js"></script>
+    <script src="assets/js/dashboard.js"></script>
 </body>
 
 </html>

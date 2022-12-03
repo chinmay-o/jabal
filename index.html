@@ -113,16 +113,10 @@
                         </div>
                         <!-- single ENd -->
                         <!-- single -->
-                        <div class="single">
+                        <!-- <div class="single">
                             <i class="fas fa-envelope"></i>
                             <a href="mailto:example@gmail.com">example@gmail.com</a>
-                        </div>
-                        <!-- single ENd -->
-                        <!-- single -->
-                        <div class="single">
-                            <i class="fas fa-globe"></i>
-                            <a href="index.html">www.webexample.com</a>
-                        </div>
+                        </div> -->
                         <!-- single ENd -->
                         <!-- single -->
                         <div class="single">
@@ -383,11 +377,14 @@
                             <img src="assets/images/products/01.jpg" alt="Business_Finbiz">
                             <a class="rts-btn btn-primary rounded" href="our-products.html"><i class="far fa-arrow-right"></i></a>
                         </div>
-                        <div class="product-contact-wrapper">
-                            <a href="our-products.html">
-                                <h5 class="title">Rice</h5>
-                            </a>
-                            <span>Grain</span>
+                        <div class="custom-grid">
+                          <div class="product-contact-wrapper">
+                              <a href="our-products.html">
+                                  <h5 class="title">Rice</h5>
+                              </a>
+                              <span>Grain</span>
+                          </div>
+                          <a href="our-products.html" class="rts-btn btn-primary">Order Now</a>
                         </div>
                     </div>
                 </div>
@@ -397,11 +394,14 @@
                             <img src="assets/images/products/02.jpg" alt="Business_Finbiz">
                             <a class="rts-btn btn-primary rounded" href="our-products.html"><i class="far fa-arrow-right"></i></a>
                         </div>
-                        <div class="product-contact-wrapper">
-                            <a href="our-products.html">
-                                <h5 class="title">Chicken</h5>
-                            </a>
-                            <span>Fresh Meat</span>
+                        <div class="custom-grid">
+                          <div class="product-contact-wrapper">
+                              <a href="our-products.html">
+                                  <h5 class="title">Chicken</h5>
+                              </a>
+                              <span>Fresh Meat</span>
+                          </div>
+                          <a href="our-products.html" class="rts-btn btn-primary">Order Now</a>
                         </div>
                     </div>
                 </div>
@@ -411,11 +411,14 @@
                             <img src="assets/images/products/03.jpg" alt="Business_Finbiz">
                             <a class="rts-btn btn-primary rounded" href="our-products.html"><i class="far fa-arrow-right"></i></a>
                         </div>
-                        <div class="product-contact-wrapper">
-                            <a href="our-products.html">
-                                <h5 class="title">Clove</h5>
-                            </a>
-                            <span>Spice</span>
+                        <div class="custom-grid">
+                          <div class="product-contact-wrapper">
+                              <a href="our-products.html">
+                                  <h5 class="title">Clove</h5>
+                              </a>
+                              <span>Spice</span>
+                          </div>
+                          <a href="our-products.html" class="rts-btn btn-primary">Order Now</a>
                         </div>
                     </div>
                 </div>
@@ -471,16 +474,18 @@
             <div class="row">
                 <div class="col-lg-6 pr--40 pr_md--0 pr_sm--10">
                     <!-- appoinment wrapper start -->
-                    <form action="#" class="rts-appoinment-form">
+                    <form id="enquiryForm" class="rts-appoinment-form">
                         <div class="inner">
                             <div class="title-area text-start">
                                 <span data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">Fill In</span>
                                 <h4 class="title" data-sal-delay="250" data-sal="slide-up" data-sal-duration="800">Get a Call Back</h4>
                             </div>
-                            <input type="text" name="name" placeholder="Your Name" required>
-                            <input type="email" name="name" placeholder="Enter Email" required>
-                            <input type="text" name="name" placeholder="Phone Number" required>
-                            <button class="rts-btn btn-primary">Submit Message</button>
+                            <input id="frm_name" type="text" name="name" placeholder="Your Name" required>
+                            <input id="frm_email" type="email" name="email" placeholder="Enter Email" required>
+                            <input id="frm_mobile" type="text" name="mobile" placeholder="Phone Number" required>
+                            <input id="frm_message" type="text" name="message" hidden>
+                            <button type="submit" class="rts-btn btn-primary">Submit Message</button>
+                            <p class="messages"></p>
                         </div>
                     </form>
                     <!-- appoinment wrapper end -->
@@ -680,6 +685,18 @@
     <!-- main Js -->
     <script src="assets/js/main.js"></script>
     <!-- scripts end form hear -->
+
+  <!-- Firebase CDN -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-storage.js"></script>
+
+  <!-- Firebase Database -->
+  <script src="https://momentjs.com/downloads/moment.js"></script>
+  <script src="assets/js/firebase.js"></script>
+  <script src="assets/js/enquiry.js"></script>
+
 </body>
 
 </html>
