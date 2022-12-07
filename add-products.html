@@ -123,30 +123,32 @@
 
     <div id="anywhere-home"></div>
 
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
+    <div class="row align-items-center">
+      <div class="col-md-8 col-sm-12">
 
         <div class="rts-contact-fluid rts-section-gap">
           <div class="form-wrapper">
             <h4>Add Products</h4>
             <form id="addProductForm">
-              <input type="text" id="productName" name="Product Name" placeholder="Product Name">
-              <select class="mt-4" id="productCategory" required>
-                <option value="">Category</option>
-                <option>Grains</option>
-                <option>Meat</option>
-                <option>Spices</option>
-                <option>Dry Fruits</option>
+              <input class="form-control" type="text" id="productName" name="Product Name" placeholder="Product Name">
+              <select class="border" class="mt-4" id="productCategory" required>
+                <option>Spice</option>
+                <option>Grain</option>
+                <option>Meat(Fresh/Frozen)</option>
+                <option>Meat(Fresh)</option>
+                <option>Meat(Frozen)</option>
+                <option>Vegetable</option>
+                <option>Dry Fruit</option>
               </select>
-              <input onclick="chooseUpload()" type="file" id="productImg" class="mt-4" required>
-              <button type="submit" class="rts-btn btn-primary">Send Message</button>
+              <input onclick="chooseUpload()" type="file" id="productImg" class="mt-4 pt-3" required>
+              <button type="submit" class="rts-btn btn-primary">Add Product</button>
             </form>
             <div id="form-messages"></div>
           </div>
         </div>
         </div>
-      <div class="col-md-6 col-sm-12">
-        <img id="productDummy" width="300" src="https://leaveitwithme.com.au/wp-content/uploads/2013/11/dummy-image-square.jpg" alt="">
+      <div class="col-md-4 col-sm-12">
+        <img id="productDummy" style="width: 100%; min-height: 300px; max-height:300px; object-fit: cover;" src="https://leaveitwithme.com.au/wp-content/uploads/2013/11/dummy-image-square.jpg" alt="">
       </div>
 
     </div>
@@ -154,7 +156,7 @@
     <hr class="mt-7 mb-6">
     <section class="wrapper bg-light">
       <div class="container pt-12 pt-md-14 pb-14 pb-md-16">
-        <div class="row gx-md-8 gx-xl-12 gy-12">
+        <div class="row gx-md-8 gx-xl-12 gy-12 align-items-center">
           <div class="col-lg-12">
             <div class="table-responsive">
               <table class="table text-center shopping-cart">

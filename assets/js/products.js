@@ -46,21 +46,21 @@ function productHTML() {
   for (var i = 0; i < productArray.length; i++) {
 
     document.getElementById('productList').innerHTML += '<div id="'+ productArray[i].key +
-    '" class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">'+
+    '" class="mt-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 '+ productArray[i].category.toLowerCase().split("(")[0].split(" ").join("") +'">'+
         '<div class="rts-product-one">'+
             '<div class="thumbnail-area">'+
                 '<img src="'+ productArray[i].imageURL +'" alt="Business_Finbiz">'+
-                '<a class="rts-btn btn-primary rounded" href="javascript:void();">'+
+                '<a class="rts-btn btn-primary rounded" href="tel:+97143302280">'+
                 '<i class="far fa-arrow-right"></i></a>'+
             '</div>'+
             '<div class="custom-grid">'+
               '<div class="product-contact-wrapper">'+
-                  '<a href="javascript:void();">'+
+                  '<a href="tel:+97143302280">'+
                       '<h5 class="title">'+ productArray[i].name +'</h5>'+
                   '</a>'+
                   '<span>'+ productArray[i].category +'</span>'+
               '</div>'+
-              '<a href="javascript:void();" class="rts-btn btn-primary">Order Now</a>'+
+              '<a href="tel:+97143302280" class="rts-btn btn-primary">Order Now</a>'+
             '</div>'+
         '</div>'+
     '</div>'
